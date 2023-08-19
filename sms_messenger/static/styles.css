@@ -1,0 +1,105 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.message-compose, .message-history {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="tel"], textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.message-history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message-entry {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: flex-start; /* Align content at the top */
+}
+
+.timestamp {
+    color: #999;
+    font-size: 12px;
+    font-weight: bold; /* Make timestamp bold */
+    margin-right: 10px;
+    flex-shrink: 0; /* Prevent timestamp from shrinking */
+    width: 140px; /* Fixed width for timestamp column */
+}
+
+.from,
+.to {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #007bff; /* Change color for To/From */
+}
+
+.to {
+    color: #28a745; /* Change color for contact number */
+    margin-right: 10px;
+}
+
+.message {
+    color: #333;
+    margin: 0; /* Remove margin for consistent alignment */
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}

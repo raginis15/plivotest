@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SMS Messenger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>SMS Messenger</h1>
+        <div class="message-compose">
+            <h2>Compose Message</h2>
+            <form action="/send" method="post">
+                <input type="tel" name="to_number" placeholder="Recipient's Phone Number" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="message-history">
+            <h2>Message History</h2>
+            <ul>
+                {% for msg in messages %}
+                    <li class="message-entry">
+                        <span class="timestamp">{{ msg.timestamp }}</span>
+                        {% if msg.received_from %}
+                            <span class="from">From: {{ msg.received_from }}</span>
+                        {% else %}
+                            <span class="to">To: {{ msg.to_number }}</span>
+                        {% endif %}
+                        <span class="message">{{ msg.message }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
