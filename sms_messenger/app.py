@@ -8,8 +8,8 @@ app = Flask(__name__)
 # In-memory storage for messages (replace this with a database in production)
 messages = []
 
-auth_id = 'MAMWU1M2FKMZCXMWUZOG'
-auth_token = 'NjY0MTkzMGE3MDJmMDZlNTJiMGUyM2RjMWIyZTNm'
+auth_id = 
+auth_token = 
 plivo_client = plivo.RestClient(auth_id=auth_id, auth_token=auth_token)
 
 @app.route('/')
